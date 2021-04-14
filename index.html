@@ -1,70 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.." integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.." integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tethe..">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body style="background-color: deepskyblue">
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkblue;">
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav mr-auto">
-<li class="nav-item active">
-<a class="nav-link" href="#">Домашняя страница</a>
-</li>
-<li class="nav-item active">
-<a class="nav-link" href="#">Упражнения</a>
-</li>
-<li class="nav-item dropdown active">
-<a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Программы
-</a>
-<div class="dropdown-menu" aria-labelledby="programDropdown">
-<a class="dropdown-item" href="#">Пр. Тренировок</a>
-<a class="dropdown-item" href="#">Пр. Питания</a>
-</div>
-</li>
-<li class="nav-item dropdown active">
-<a class="nav-link dropdown-toggle" href="#" id="healthDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Здоровый образ жизни
-</a>
-<div class="dropdown-menu" aria-labelledby="healthDropdown">
-<a class="dropdown-item" href="#">Фитнес</a>
-<a class="dropdown-item" href="#">Здоровье</a>
-<a class="dropdown-item" href="#">Питание</a>
-<a class="dropdown-item" href="#">Здоровые рецепты</a>
-</div>
-</li>
-<li class="nav-item active">
-<a class="nav-link" href="#">Статьи</a>
-</li>
-<form class="form-inline">
-<input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Поиск</button>
-</form>
-</ul>
-<div class="row">
-<div class="col-auto">
-<ul class="nav navbar-nav navbar-right">
-<li class="nav-item nav-link active">Регистрация</li>
-<li class="nav-item nav-link active">Вход</li>
-</ul>
-</div>
-</div>
-</div>
-</nav>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-<script type="text/javascript">
-$(document).ready(function(){
-$(".dropdown-toggle").dropdown();
-});
-</script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tethe..">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+        <script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.." integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.." integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: deepskyblue">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkblue;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav mr-auto navbar-left">
+            <li>
+            <h6 style="color: azure;">Logo</h6>
+            </li>
+            </ul>
+            <ul class="nav navbar-nav mr-auto navbar-center" >
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Домашняя страница</a>
+            </li>
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Об нас</a>
+            </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item nav-link active">Профиль</li>
+            </ul>
+            </div>
+        </nav>
+        <div style="width: 50%; margin-left: auto; margin-right: auto;">
+        <table id="myTable">
+            <thead class="thead-dark">
+                <tr>
+                <th>Номер</th>
+                <th>Имя</th>
+                <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody class="searchable">
+                <tr class="danger">
+                <td>1</td>
+                <td>Яблоко</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>2</td>
+                <td>Груша</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>3</td>
+                <td>Творог</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>4</td>
+                <td>Молоко</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>5</td>
+                <td>Мороженое</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>6</td>
+                <td>Курица</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>7</td>
+                <td>Свинина</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>8</td>
+                <td>Говядина</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>9</td>
+                <td>Торт</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>10</td>
+                <td>Масло</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                
+                </tr>
+                <tr class="danger">
+                <td>11</td>
+                <td>Банан</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>12</td>
+                <td>Кефир</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+                <tr class="danger">
+                <td>13</td>
+                <td>Йогурт</td>
+                <td><button>Детали</button><button>Редактировать</button><button>Удалить</button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <footer class="footer navbar-fixed-bottom" >
+            <div class="container">
+                <div class="d-flex justify-content-between ">
+                    <div class="footer-left">
+                        Copyright &copy; 2021 Fitness center
+                    </div>
+                    <div class="footer-right">
+                        Kate Kolodko
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.noConflict();
+            var table = $('#myTable').DataTable();
+        });
+    </script>
 </html>
